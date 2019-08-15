@@ -8,6 +8,36 @@
     <name>wanghang-technology</name>
     <packaging>pom</packaging>
 
+    <!--父工程中定义依赖包的版本 -->
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- logging -->
+        <org.slf4j.version>1.7.25</org.slf4j.version>
+        <log4j.version>2.8.2</log4j.version>
+
+        <!-- plugins -->
+        <lombok.version>1.18.0</lombok.version>
+
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <spring-boot.version>2.1.3.RELEASE</spring-boot.version>
+
+        <springfox-swagger2.version>2.7.0</springfox-swagger2.version>
+        <mysql.version>6.0.6</mysql.version>
+
+        <mybatis-plus.version>2.1.9</mybatis-plus.version>
+        <mybatis-plus.spring-boot-starter.version>1.0.5</mybatis-plus.spring-boot-starter.version>
+
+        <redis.version>1.4.4.RELEASE</redis.version>
+        <jjwt.version>0.9.0</jjwt.version>
+
+        <aliyun-mns.version>1.1.8</aliyun-mns.version>
+        <aliyun-oss.version>3.3.0</aliyun-oss.version>
+
+        <tms-gonglu.version>1.0.0-SNAPSHOT</tms-gonglu.version>
+    </properties>
+
     <!--springBoot父模块的依赖 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -71,7 +101,7 @@
             <version>${log4j.version}</version>
             <scope>runtime</scope>
         </dependency>
-        <!-- test -->
+
         <!-- utils -->
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -87,8 +117,7 @@
 
     <!--模块工程 -->
     <modules>
-
-
+        <module>wanghang-mysql</module>
     </modules>
 
     <!--插件 -->
@@ -140,32 +169,5 @@
     </distributionManagement>
     -->
 
-    <properties>
-        <java.version>1.8</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <!-- logging -->
-        <org.slf4j.version>1.7.25</org.slf4j.version>
-        <log4j.version>2.8.2</log4j.version>
 
-        <!-- plugins -->
-        <lombok.version>1.18.0</lombok.version>
-
-        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
-        <spring-boot.version>2.1.3.RELEASE</spring-boot.version>
-
-        <springfox-swagger2.version>2.7.0</springfox-swagger2.version>
-        <mysql.version>6.0.6</mysql.version>
-
-        <mybatis-plus.version>2.1.9</mybatis-plus.version>
-        <mybatis-plus.spring-boot-starter.version>1.0.5</mybatis-plus.spring-boot-starter.version>
-
-        <redis.version>1.4.4.RELEASE</redis.version>
-        <jjwt.version>0.9.0</jjwt.version>
-
-        <aliyun-mns.version>1.1.8</aliyun-mns.version>
-        <aliyun-oss.version>3.3.0</aliyun-oss.version>
-
-        <tms-gonglu.version>1.0.0-SNAPSHOT</tms-gonglu.version>
-    </properties>
 </project>
