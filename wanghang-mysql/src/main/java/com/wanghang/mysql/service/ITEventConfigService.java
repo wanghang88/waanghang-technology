@@ -12,5 +12,6 @@ import com.wanghang.mysql.db.entity.TEventConfig;
  * @since 2019-08-15
  */
 public interface ITEventConfigService extends IBaseService<TEventConfig>{
+	String getEventSysno() throws Exception;
 	
 }

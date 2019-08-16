@@ -2,6 +2,9 @@ package com.wanghang.mysql.db.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.wanghang.mysql.db.entity.TEventConfig;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * <p>
@@ -11,6 +14,10 @@ import com.wanghang.mysql.db.entity.TEventConfig;
  * @author Damon
  * @since 2019-08-15
  */
+@Repository
 public interface TEventConfigMapper extends BaseMapper<TEventConfig> {
+
+	List<Integer> getEventSysno();
+
 
 }
